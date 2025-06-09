@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author User
+ */
+public class ErnestBankTest {
+    public static void main(String[] args) {
+        ErnestBankAccount acc1 = new ErnestBankAccount("EB001", 600.0);
+        ErnestBankAccount acc2 = new ErnestBankAccount("EB002", 200.0);
+
+        System.out.println("Before Transfer:");
+        acc1.displayAccountInfo();
+        acc2.displayAccountInfo();
+
+        ErnestBank bank = new ErnestBank();
+        bank.transferMoney(acc1, acc2, 250.0);
+
+        System.out.println("After Transfer:");
+        acc1.displayAccountInfo();
+        acc2.displayAccountInfo();
+    }
+}
