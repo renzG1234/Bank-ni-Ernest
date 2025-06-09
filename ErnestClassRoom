@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author User
+ */
+public class ErnestClassroom {
+    private String className;
+    private ArrayList<ErnestStudent> students = new ArrayList<>();
+
+    public ErnestClassroom(String className) {
+        this.className = className;
+    }
+
+    public void addStudent(ErnestStudent student) {
+        students.add(student);
+    }
+
+    public void removeStudent(ErnestStudent student) {
+        students.remove(student);
+    }
+
+    public void transferStudent(ErnestStudent student, ErnestClassroom newClassroom) {
+        if (students.contains(student)) {
+            removeStudent(student);
+            newClassroom.addStudent(student);
+            System.out.println("Transferred: " + student);
+        }
+    }
+
+    public void displayStudents() {
+        System.out.println("Class: " + className);
+        for (ErnestStudent s : students) {
+            s.displayInfo();
+        }
+    }
+}
