@@ -1,0 +1,27 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author User
+ */
+public class ErnestLibraryTest {
+    public static void main(String[] args) {
+        ErnestBOOK book1 = new ErnestBOOK("Sapiens", "Yuval Noah Harari", 4);
+        ErnestBOOK book2 = new ErnestBOOK("Clean Code", "Robert C. Martin", 2);
+
+        ErnestLibrary lib = new ErnestLibrary();
+        lib.addBook(book1);
+        lib.addBook(book2);
+
+        System.out.println("Before Loan:");
+        lib.displayLibrary();
+
+        lib.loanBook(book1, 1);
+
+        System.out.println("After Loan:");
+        lib.displayLibrary();
+    }
+}
