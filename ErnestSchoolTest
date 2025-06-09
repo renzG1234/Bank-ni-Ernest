@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author User
+ */
+public class ErnestSchoolTest {
+    public static void main(String[] args) {
+        ErnestStudent s1 = new ErnestStudent("Liam", 101);
+        ErnestStudent s2 = new ErnestStudent("Emma", 102);
+        ErnestStudent s3 = new ErnestStudent("Noah", 103);
+
+        ErnestClassroom classX = new ErnestClassroom("X");
+        ErnestClassroom classY = new ErnestClassroom("Y");
+
+        classX.addStudent(s1);
+        classX.addStudent(s2);
+        classX.addStudent(s3);
+
+        System.out.println("Before Transfer:");
+        classX.displayStudents();
+        classY.displayStudents();
+
+        classX.transferStudent(s2, classY);
+
+        System.out.println("After Transfer:");
+        classX.displayStudents();
+        classY.displayStudents();
+    }
+}
+
