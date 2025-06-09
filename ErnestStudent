@@ -1,0 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author User
+ */
+public class ErnestStudent {
+    private String name;
+    private int id;
+
+    public ErnestStudent(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public void displayInfo() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+    }
+}
